@@ -43,7 +43,7 @@ function BotCard({bot, clickEvent, deleteBot}){
                     
                     <span>
                         <div>
-                            <button onClick={(event) => {event.stopPropagaton();deleteBot(bot);}}>X</button>
+                            <button onClick={(event) => {event.stopPropagation();deleteBot(bot);}}>X</button>
                         </div>
                     </span>
                 </div>

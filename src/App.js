@@ -1,5 +1,7 @@
 import React from 'react';
 import BotPage from './component/BotPage';
+import Navbar from './component/Navbar';
+import './App.css';
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
           Learn React
         </a>
       </header> */}
+      <Navbar/>
       <BotPage/>
     </div>
   );
