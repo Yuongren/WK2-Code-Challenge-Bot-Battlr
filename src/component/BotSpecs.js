@@ -11,7 +11,7 @@ const botTypeClasses = {
 
 function BotSpecs (bot){
     return (
-        <div>
+        <div className="row">
             <div className="row">
                 <div className="four wide column">
                     <img alt="oh no!"/>

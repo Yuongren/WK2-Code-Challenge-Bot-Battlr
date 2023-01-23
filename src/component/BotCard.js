@@ -11,41 +11,41 @@ const botTypeClasses = {
 
 function BotCard({bot, clickEvent, deleteBot}){
     return(
-        <div>
-            <div key={bot.id} onClick={() => clickEvent(bot)}>
+        <div className="column">
+            <div className="key1" key={bot.id} onClick={() => clickEvent(bot)}>
                 <div className="image">
                     <img alt="oh no!" src={bot.avatar_url}/>
                 </div>
                 <div className="content">
                     <div className="header">
-                        {bot.name}
+                       Name: {bot.name}
                         <i className={botTypeClasses[bot.bot_class]}/>
                     </div>
                     <div className="meta text-wrap">
-                        <small>{bot.catchphrase}</small>
+                       Catchphrase: <small>{bot.catchphrase}</small>
                     </div>
                 </div>
                 <div className="extra content">
-                    <span>
+                    <p>
                         <i className="icon heartbeat"/>
-                        {bot.health}
-                    </span>
+                        Health: {bot.health}
+                    </p>
 
-                    <span>
+                    <p>
                         <i className="icon lightning"/>
-                        {bot.damage}
-                    </span>
+                       Damage: {bot.damage}
+                    </p>
 
-                    <span>
+                    <p>
                         <i className="icon shield"/>
-                        {bot.armor}
-                    </span>
+                        Armor: {bot.armor}
+                    </p>
                     
-                    <span>
+                    <p>
                         <div>
                             <button onClick={(event) => {event.stopPropagation();deleteBot(bot);}}>X</button>
                         </div>
-                    </span>
+                    </p>
                 </div>
             </div>
         </div>

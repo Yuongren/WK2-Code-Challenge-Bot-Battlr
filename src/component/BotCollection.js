@@ -10,7 +10,7 @@ function BotCollection({ bots, enlistBot, deleteBot }){
       });
 
       return (
-        <div>
+        <div className = "container mt-4">
             <div className="row">
                 {botItem}
             </div>

@@ -10,9 +10,9 @@ function YourArmy ({ bots, removeBot, deleteBot }){
     })
 
     return (
-        <div className="bot-army">
-          <div className="five column grid">
-            <div className="row bot-army-row">
+        <div className="d-block p-2 bg-dark text-black">
+          <div className="container mt-4">
+            <div className="row">
                 {armyItem}
             </div>
           </div>
