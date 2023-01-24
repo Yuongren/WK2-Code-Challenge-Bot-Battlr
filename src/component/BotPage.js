@@ -3,11 +3,11 @@ import BotCollection from "./BotCollection";
 import YourArmy from "./YourBotArmy";
 
 
-function BotPage (){
+function BotPage() {
   const [bots, setBots] = useState([]);
 
   function fetchData() {
-    return fetch(`https://youngren.vercel.app/bots`) 
+    return fetch(`https://youngren.vercel.app/bots`)
       .then((resp) => resp.json())
       .then((data) => {
         setBots(data);
@@ -18,7 +18,7 @@ function BotPage (){
     fetchData();
   }, []);
 
-  
+
 
   function enlistBot(bot) {
     setBots(bots.map((b) => (b.id === bot.id ? { ...b, army: true } : b)));
@@ -34,7 +34,7 @@ function BotPage (){
   }
   return (
     <div>
-      <YourArmy bots={bots.filter((b) => b.army)} removeBot={removeBot} deleteBot={deleteBot}/>
+      <YourArmy bots={bots.filter((b) => b.army)} removeBot={removeBot} deleteBot={deleteBot} />
       <BotCollection bots={bots} enlistBot={enlistBot} deleteBot={deleteBot} />
     </div>
   );
